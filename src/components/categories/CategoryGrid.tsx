@@ -7,7 +7,7 @@ interface CategoryGridProps {
 }
 
 export function CategoryGrid({categories}:CategoryGridProps) {
-    const [categoryState, setCategory] = useState(categories);
+    const [categoryState] = useState(categories);
 
     return (
         <ul className="grid grid-cols-2 gap-[40px] mx-17 my-10">

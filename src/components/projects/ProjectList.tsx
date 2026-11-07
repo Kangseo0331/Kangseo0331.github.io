@@ -9,7 +9,7 @@ interface ProjectListProps {
 }
 
 export function ProjectList({projects}:ProjectListProps) {
-    const [categoryState, setProject] = useState(projects);
+    const [categoryState] = useState(projects);
 
     return (
         <div className="mb-30">
