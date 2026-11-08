@@ -11,13 +11,14 @@ export function home() {
 	return (
 		<>
 			<Hero/>
-			<hr className="mx-auto my-6 border-grey-300 rounded w-90/100"/>
+			<hr className="flex mx-auto my-6 border-grey-300 rounded w-80/100"/>
+			
 			<About/>
-			<hr className="mx-auto mt-6 mb-18 border-grey-300 rounded w-90/100"/>
+			<hr className="flex mx-auto mt-6 mb-12 border-grey-300 rounded w-80/100"/>
 
 			<div className="flex flex-row justify-center gap-6 items-end">
 				<img src="/icons/pixel-happy-cloud.svg" className="w-12 h-12" />
-				<h4 className="text-[20px] pb-5 font-press">Categories</h4>
+				<h4 className="text-normal pb-5 font-press">Categories</h4>
 				<img src="/icons/pixel-cloud.svg" className="w-12 h-12" />
 			</div>
 			
@@ -31,7 +32,7 @@ export function home() {
 					className="flex flex-col items-center justify-center w-fit gap-4"
 				>
 					<img src="/icons/pixel-apple2.svg" className="w-35 h-35" />
-					<h4 className="text-[20px] font-medium font-press pb-4">Projects</h4>
+					<h4 className="text-normal font-press mb-2">Projects</h4>
 				</Link>
 			</div>
 
@@ -40,7 +41,7 @@ export function home() {
 				projects={projects}
 			/>
 
-			<hr className="mx-auto mt-6 mb-6 border-grey-300 rounded w-90/100"/>
+			<hr className="mx-auto mt-6 mb-6 border-grey-300 rounded w-80/100"/>
 			<Footer />
 
 

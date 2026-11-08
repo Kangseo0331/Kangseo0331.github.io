@@ -10,7 +10,7 @@ export function CategoryGrid({categories}:CategoryGridProps) {
     const [categoryState] = useState(categories);
 
     return (
-        <ul className="grid grid-cols-2 gap-[40px] mx-17 my-10">
+        <ul className="grid grid-cols-2 gap-[15px] mx-40 my-6">
             {categoryState.map((category) =>(
                 <li key={String(category.id)}>
                     <CategoryCard

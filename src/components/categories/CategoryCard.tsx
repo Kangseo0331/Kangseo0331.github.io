@@ -9,17 +9,16 @@ interface CategoryCardProps {
 export function CategoryCard({ category }: CategoryCardProps) {
 
     return (
-        <div className="border rounded-[90px] px-12 pt-10 pb-20 h-[256px]">
+        <div className="border rounded-[60px] px-10 pt-4 pb-20 h-[160px]">
             <Link
                 to="/categories/$categoryId"
                 params={{ categoryId: String(category.id) }}
             >
                 <div className="text-left leading-relaxed">
-                    <h5 className="text-[38px] font-pixel">0{String(category.id)}</h5>
-                    <p className="text-[18px] font-pixel">{category.title}</p>
-                    <p>{category.description}</p>
+                    <h5 className="text-[30px] font-pixel">0{String(category.id)}</h5>
+                    <p className="text-[15px] font-pixel">{category.title}</p>
+                    <p className="text-[13px]">{category.description}</p>
                 </div>
-
 
             </Link>
 

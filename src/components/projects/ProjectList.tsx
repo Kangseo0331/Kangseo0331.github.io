@@ -13,7 +13,7 @@ export function ProjectList({projects}:ProjectListProps) {
 
     return (
         <div className="mb-30">
-            <ul className="flex flex-col text-left mx-15 mt-15 mb-30 leading-relaxed gap-4">
+            <ul className="flex flex-col text-left mx-20 mt-6 mb-30 leading-relaxed gap-4">
                 {categoryState.map((project) =>(
                     <li 
                         key={String(project.id)}

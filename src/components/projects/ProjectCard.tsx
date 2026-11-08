@@ -21,7 +21,7 @@ export function ProjectCard({project}: ProjectCardProps) {
 					<p className="">{project.startDate} - {project.completionDate}</p>
 					<div className="flex gap-3 mt-1">
 						{project.tagline.map((tag) => (
-							<span className="border rounded-3xl py-[1px] px-[9px] bg-[#6b6375] text-white">{tag}</span>
+							<span className="text-[13px] font-mono border rounded-3xl py-[1px] px-[9px] bg-[#6b6375] text-white">{tag}</span>
 						))}
 					</div>
 				</div>

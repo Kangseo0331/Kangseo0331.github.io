@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router"
 
 export function Header() {
   return (
-		<header className="flex flex-row justify-between m-6">
+		<header className="flex flex-row justify-between my-12 mx-18">
 			<Link 
 				to="/"
 				className="flex flex-row">
