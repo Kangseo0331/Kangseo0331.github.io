@@ -1,3 +1,135 @@
+
 backend:
   name: turbo-github
   turbo_site_id: "0be49f31-799d-4492-a149-96a0f634e324"
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # 일반 게시글 - Bug Bounty
+  - name: "bugbounty"
+    label: "Bug Bounty"
+    label_singular: "Bug Bounty Post"
+    folder: "src/content/bugbounty"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "bugbounty" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 일반 게시글 - Competition
+  - name: "competition"
+    label: "Competition / Certification"
+    label_singular: "Competition Post"
+    folder: "src/content/competition"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "competition" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 일반 게시글 - CTF / Wargame
+  - name: "ctfwargame"
+    label: "CTF / Wargame"
+    label_singular: "CTF / Wargame Post"
+    folder: "src/content/ctfwargame"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "ctfwargame" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 일반 게시글 - Development
+  - name: "development"
+    label: "Development"
+    label_singular: "Development Post"
+    folder: "src/content/development"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "development" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 일반 게시글 - Papers
+  - name: "papers"
+    label: "Papers / Conferences"
+    label_singular: "Paper / Conference Post"
+    folder: "src/content/papers"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "papers" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 일반 게시글 - Tech Blog
+  - name: "techblog"
+    label: "Technical Blog"
+    label_singular: "Technical Post"
+    folder: "src/content/techblog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "hidden", default: "techblog" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 프로젝트 게시글
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Start Date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Completion Date", name: "completionDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Tagline", name: "tagline", widget: "list", hint: "예: development, Backend, JavaScript, Express" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
