@@ -1,0 +1,357 @@
+
+/* Headings */
+.markdown-content h1 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+/* Paragraph */
+.markdown-content p {
+  line-height: 1.9;
+}
+
+/* Links */
+.markdown-content a {
+  color: #78658f;
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Code block */
+.markdown-content .markdown-code-block {
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  color: #373737;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.markdown-content .markdown-code-block code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  white-space: pre;
+}
+
+.markdown-content .markdown-code-block {
+  text-align: left;
+}
+
+.markdown-content .markdown-code-block code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+}
+
+/* Inline code */
+.markdown-content .markdown-inline-code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #555;
+  font-size: 0.9em;
+  white-space: break-spaces;
+}
+
+.markdown-content .markdown-inline-code::before,
+.markdown-content .markdown-inline-code::after {
+  content: none;
+}
+
+/* Syntax highlighting */
+.markdown-content .hljs-keyword,
+.markdown-content .hljs-selector-tag {
+  color: #8b5cf6;
+}
+
+.markdown-content .hljs-string,
+.markdown-content .hljs-attr {
+  color: #39845a;
+}
+
+.markdown-content .hljs-number,
+.markdown-content .hljs-literal {
+  color: #c17b38;
+}
+
+.markdown-content .hljs-comment {
+  color: #999;
+  font-style: italic;
+}
+
+.markdown-content .hljs-title,
+.markdown-content .hljs-built_in,
+.markdown-content .hljs-type {
+  color: #3975b8;
+}
+
+
+/* Blockquote */
+.markdown-content blockquote {
+  border-left-color: #8b7b9e;
+  color: #666;
+}
+
+/* Images */
+.markdown-content img {
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lists */
+.markdown-content li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Horizontal rule */
+.markdown-content hr {
+  border-color: #e5e1e9;
+}
+
+.markdown-content aside {
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background-color: #f5f3f7;
+  border-left: 4px solid #8b7b9e;
+  border-radius: 0.5rem;
+}
+
+.markdown-code-wrapper {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.markdown-code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.markdown-code-header button {
+  cursor: pointer;
+  color: #777;
+}
+
+.markdown-code-header button:hover {
+  color: #333;
+}
+
+.markdown-content .markdown-code-block {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+/* Markdown 전체 왼쪽 정렬 */
+.markdown-content {
+  text-align: left;
+}
+
+/* Unordered list */
+.markdown-content ul {
+  list-style-type: disc;
+  padding-left: 1.75rem;
+  margin: 1rem 0;
+}
+
+/* Nested unordered list */
+.markdown-content ul ul {
+  list-style-type: circle;
+  margin: 0.5rem 0;
+}
+
+.markdown-content ul ul ul {
+  list-style-type: square;
+}
+
+/* Ordered list */
+.markdown-content ol {
+  list-style-type: decimal;
+  padding-left: 1.75rem;
+  margin: 1rem 0;
+}
+
+/* Nested ordered list */
+.markdown-content ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-content ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* List item */
+.markdown-content li {
+  padding-left: 0.25rem;
+  margin: 0.35rem 0;
+}
+
+/* Nested list spacing */
+.markdown-content li > ul,
+.markdown-content li > ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Markdown Headings */
+.markdown-content h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+}
+
+.markdown-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 650;
+  line-height: 1.5;
+  color: #292929;
+}
+
+.markdown-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333;
+}
+
+.markdown-content h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Heading followed by content */
+.markdown-content h1 + p,
+.markdown-content h2 + p,
+.markdown-content h3 + p,
+.markdown-content h4 + p {
+  margin-top: 0;
+}
+
+.markdown-content h1 + ul,
+.markdown-content h1 + ol,
+.markdown-content h2 + ul,
+.markdown-content h2 + ol,
+.markdown-content h3 + ul,
+.markdown-content h3 + ol,
+.markdown-content h4 + ul,
+.markdown-content h4 + ol {
+  margin-top: 0;
+}
+
+/* Table wrapper */
+.markdown-content .markdown-table-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+/* Table */
+.markdown-content .markdown-table-wrapper table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Table header */
+.markdown-content .markdown-table-wrapper th {
+  padding: 12px 16px;
+  background-color: #f7f7f7;
+  color: #444;
+  font-weight: 600;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Table cell */
+.markdown-content .markdown-table-wrapper td {
+  padding: 12px 16px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove last row border */
+.markdown-content .markdown-table-wrapper tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table wrapper */
+.markdown-content .markdown-table-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+/* Table */
+.markdown-content .markdown-table-wrapper table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Table header */
+.markdown-content .markdown-table-wrapper th {
+  padding: 12px 16px;
+  background-color: #f7f7f7;
+  color: #444;
+  font-weight: 600;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Table cell */
+.markdown-content .markdown-table-wrapper td {
+  padding: 12px 16px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove last row border */
+.markdown-content .markdown-table-wrapper tbody tr:last-child td {
+  border-bottom: none;
+}

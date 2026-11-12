@@ -1,7 +1,7 @@
 
 import { useParams } from "@tanstack/react-router";
-import ReactMarkdown from "react-markdown";
 import { projects } from "../data/projects";
+import { MarkdownContent } from "../components/markdown/MarkdownContent";
 
 export function ProjectDetailPage() {
   const { projectId } = useParams({
@@ -39,9 +39,7 @@ export function ProjectDetailPage() {
 
       <hr className="mb-8" />
 
-      <article className="prose max-w-none">
-        <ReactMarkdown>{project.content}</ReactMarkdown>
-      </article>
+      <MarkdownContent content={project.content} />
     </div>
   );
 }

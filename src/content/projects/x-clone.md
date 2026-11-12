@@ -149,3 +149,48 @@ https://drive.google.com/file/d/1FtMe737Ta7o4ZezhRoQvyYhVG1YH1baj/view?usp=drive
 ### GitHub
 
 https://github.com/2026-Sprint-Camp-project
+
+
+## 코드 테스트
+
+인라인 코드는 `console.log("Hello")`처럼 표시돼.
+
+```javascript
+function hello() {
+  console.log("Hello, world!");
+}
+```
+
+
+## 프로젝트 주요 기능
+
+- 사용자 기능
+  - 회원가입
+  - 로그인
+  - 프로필 조회
+- 게시글 기능
+  - 게시글 작성
+  - 게시글 수정
+    - 제목 수정
+    - 내용 수정
+
+## 개발 순서
+
+1. 데이터베이스 설계
+2. API 구현
+   1. 회원 인증
+   2. 게시글 관리
+3. 프론트엔드 연동
+
+
+## 기술 스택
+
+| 구분 | 기술 | 용도 |
+|---|---|---|
+| Frontend | React | 사용자 인터페이스 |
+| Backend | Express | API 서버 |
+| Database | MySQL | 데이터 저장 |
+
+## 프로젝트 화면
+
+![메인 페이지](./images/main.png)
