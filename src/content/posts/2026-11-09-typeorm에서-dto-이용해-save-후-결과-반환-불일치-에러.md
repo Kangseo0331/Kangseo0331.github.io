@@ -108,12 +108,14 @@ export class BookService {
 
 #### ① where: { bookId: saved.bookId }
 
--   SQL의 WHERE book\_id = ? 
--   방금 저장(save)한 엔티티의 PK 값(saved.bookId)을 기준으로 정확히 그 1건을 조회
+* SQL의 WHERE book_id = ? 
+* 방금 저장(save)한 엔티티의 PK 값(saved.bookId)을 기준으로 정확히 그 1건을 조회
 
 #### ② relations: { category: true } 
 
--   SQL의 LEFT JOIN 
--   외래키로 연결된 Category 테이블의 데이터까지 함께 JOIN해서 가져오도록 지시
+* SQL의 LEFT JOIN 
+* 외래키로 연결된 Category 테이블의 데이터까지 함께 JOIN해서 가져오도록 지시
 
 #### ③ findOneOrFail()
+
+* 이터를 찾지 못하면 자동으로 EntityNotFoundError 반환
