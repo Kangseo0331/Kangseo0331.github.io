@@ -15,7 +15,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
                 params={{ categoryId: String(category.id) }}
             >
                 <div className="text-left leading-relaxed">
-                    <h5 className="text-[30px] font-pixel">0{String(category.id)}</h5>
+                    <h5 className="text-[30px] font-pixel">0{String(category.number)}</h5>
                     <p className="text-[15px] font-pixel">{category.title}</p>
                     <p className="text-[13px]">{category.description}</p>
                 </div>

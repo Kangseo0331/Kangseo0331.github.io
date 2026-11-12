@@ -2,32 +2,38 @@ import type { Category } from "../types/category";
 
 export const categories : Category[] = [
   {
-    id: 1,
+    id: "development",
+    number: 1,
     title: "Developement",
     description: "Proejcts, programming, implementation",
   },
 	  {
-    id: 2,
+    id: "ctfwargame",
+    number: 2,
     title: "CTF/Wargame",
     description: "Challenges & write-ups",
   },
 	  {
-    id: 3,
+    id: "bugbounty",
+    number: 3,
     title: "Bug Bounty",
     description: "Vulnerability research",
   },
 	  {
-    id: 4,
+    id: "techblog",
+    number: 4,
     title: "Tech Blog",
     description: "Technical notes & tutorials",
   },
 	  {
-    id: 5,
+    id: "papersconfereces",
+    number: 5,
     title: "Papers / Conferences",
     description: "Proejcts, programming, implementation",
   },
 	  {
-    id: 6,
+    id: "competitionscertificateions",
+    number: 6,
     title: "Competitons / Certifications",
     description: "Research & insights",
   }
