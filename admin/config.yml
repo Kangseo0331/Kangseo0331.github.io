@@ -1,4 +1,3 @@
-```yaml
 backend:
   name: turbo-github
   turbo_site_id: "0be49f31-799d-4492-a149-96a0f634e324"
@@ -8,7 +7,6 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # 일반 게시글
   - name: "posts"
     label: "Posts"
     label_singular: "Post"
@@ -35,8 +33,19 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # 프로젝트 게시글
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
     folder: "src/content/projects"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Start Date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Completion Date", name: "completionDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Tagline", name: "tagline", widget: "list" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
