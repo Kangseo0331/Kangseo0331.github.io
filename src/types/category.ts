@@ -1,5 +1,8 @@
-export interface Category {
-    id: Number;
+export interface Project {
+    id: string;
     title: string;
-    description: string;
+    startDate: string;
+    completionDate?: string;
+    tagline: string[];
+    content: string;
 }

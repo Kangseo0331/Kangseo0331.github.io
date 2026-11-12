@@ -11,7 +11,7 @@ export function ProjectCard({project}: ProjectCardProps) {
 		<div>
 			<Link
 				to="/projects/$projectId"
-				params={{ projectId: String(project.id)}}
+				params={{ projectId: project.id}}
 			>
 				<div className="flex flex-col leading-realaxed">
 					<div className="flex flex-row items-center gap-4 mb-2">
