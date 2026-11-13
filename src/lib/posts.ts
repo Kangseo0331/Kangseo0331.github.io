@@ -1,4 +1,5 @@
-import matter from "gray-matter";
+
+import { parse } from "yaml";
 import type { Post } from "../types/post";
 
 // Markdown 파일 자동 수집
@@ -8,23 +9,41 @@ const postFiles = import.meta.glob("../content/posts/*.md", {
   import: "default",
 }) as Record<string, string>;
 
+// Frontmatter와 Markdown 본문 분리
+function parseMarkdown(rawContent: string) {
+  const match = rawContent.match(
+    /^---\s*\r?\n([\s\S]*?)\r?\n---\s*(?:\r?\n|$)/
+  );
+
+  if (!match) {
+    return {
+      data: {} as Record<string, unknown>,
+      content: rawContent,
+    };
+  }
+
+  const data = (parse(match[1]) ?? {}) as Record<string, unknown>;
+  const content = rawContent.slice(match[0].length);
+
+  return { data, content };
+}
+
 // 모든 게시글 데이터 생성
 export const posts: Post[] = Object.entries(postFiles).map(
   ([path, rawContent]) => {
-    const { data, content } = matter(rawContent);
+    const { data, content } = parseMarkdown(rawContent);
 
-    // 파일명에서 확장자를 제거해 게시글 ID로 사용
     const id = path.split("/").pop()!.replace(/\.md$/, "");
 
     return {
       id,
-      title: data.title ?? "",
-      date: data.date instanceof Date
-        ? data.date.toISOString().slice(0, 10)
-        : String(data.date ?? ""),
-      category: data.category ?? "",
-      tags: data.tags ?? [],
-      description: data.description ?? "",
+      title: String(data.title ?? ""),
+      date: String(data.date ?? ""),
+      category: String(data.category ?? ""),
+      tags: Array.isArray(data.tags)
+        ? data.tags.map(String)
+        : [],
+      description: String(data.description ?? ""),
       content,
     };
   }

@@ -12,7 +12,6 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.4",
     "@tanstack/react-router": "^1.170.46",
-    "gray-matter": "^4.0.3",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-markdown": "^10.1.0",
