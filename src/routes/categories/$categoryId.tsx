@@ -48,17 +48,17 @@ function CategoryPage() {
         ) : (
           <ul className="divide-y">
             {categoryPosts.map((post) => (
-              <li key={post.id} className="py-6">
+              <li key={post.id} className="flex justify-start py-6">
                 <Link
                   to="/posts/$postId"
                   params={{ postId: post.id }}
                   className="block group"
                 >
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-left text-gray-500">
                     {post.date}
                   </p>
 
-                  <h3 className="text-xl mt-2 group-hover:underline">
+                  <h3 className="text-xl text-left mt-2 group-hover:underline">
                     {post.title}
                   </h3>
 
