@@ -1,17 +1,13 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      const path = window.location.pathname;
-      const query = window.location.search;
-      const hash = window.location.hash;
-
-      window.location.replace(
-        "/techblog/?p=" +
-          encodeURIComponent(path + query + hash)
-      );
-    </script>
+    <link rel="icon" type="image/svg+xml" href="/icons/pixel-apple2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kangseo0331</title>
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

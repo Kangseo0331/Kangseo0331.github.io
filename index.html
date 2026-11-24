@@ -8,17 +8,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const redirectPath = params.get("p");
-
-      if (redirectPath) {
-        window.history.replaceState(
-          null,
-          "",
-          "/techblog" + redirectPath
-        );
-      }
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
