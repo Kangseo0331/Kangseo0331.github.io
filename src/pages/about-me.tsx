@@ -1,4 +1,3 @@
-import { About } from "../components/About";
 
 export function about() {
 	return (

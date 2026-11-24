@@ -1,8 +1,6 @@
 import { Hero } from "../components/Hero";
 import { CategoryGrid } from "../components/categories/CategoryGrid";
 import { categories } from "../data/categories";
-import { ProjectList } from "../components/projects/ProjectList";
-import { projects } from "../data/projects";
 import { Footer } from "../components/layout/Footer";
 import { Link } from "@tanstack/react-router";
 
