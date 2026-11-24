@@ -1,4 +1,3 @@
-import { About } from "../components/About";
 import { Hero } from "../components/Hero";
 import { CategoryGrid } from "../components/categories/CategoryGrid";
 import { categories } from "../data/categories";
@@ -11,10 +10,7 @@ export function home() {
 	return (
 		<>
 			<Hero/>
-			<hr className="flex mx-auto my-6 border-grey-300 rounded w-80/100"/>
-			
-			<About/>
-			<hr className="flex mx-auto mt-6 mb-12 border-grey-300 rounded w-80/100"/>
+			<hr className="flex mx-auto my-10 border-grey-300 rounded w-80/100"/>
 
 			<div className="flex flex-row justify-center gap-6 items-end">
 				<img src="/icons/pixel-happy-cloud.svg" className="w-12 h-12" />
@@ -26,22 +22,33 @@ export function home() {
 				categories={categories}
 			/>
 
-			<div className="flex flex-col items-center justify-center mt-20">
-				<Link 
-					to="/projects"
-					className="flex flex-col items-center justify-center w-fit gap-4"
-				>
-					<img src="/icons/pixel-apple2.svg" className="w-35 h-35" />
-					<h4 className="text-normal font-press mb-2">Projects</h4>
-				</Link>
+
+			<div className="flex felx-row justify-center gap-30 mb-20">
+
+				<div className="flex flex-col items-center justify-center mt-20">
+					<Link 
+						to="/about"
+						className="flex flex-col items-center justify-center w-fit gap-4"
+					>
+						<img src="/icons/pixel-man.svg" className="w-30 h-30" />
+						<h4 className="text-normal font-press mb-2">About me</h4>
+					</Link>
+				</div>
+
+				<div className="flex flex-col items-center justify-center mt-20">
+					<Link 
+						to="/projects"
+						className="flex flex-col items-center justify-center w-fit gap-4"
+					>
+						<img src="/icons/pixel-apple2.svg" className="w-30 h-30" />
+						<h4 className="text-normal font-press mb-2">Projects</h4>
+					</Link>
+				</div>
 			</div>
 
 
-			<ProjectList
-				projects={projects}
-			/>
 
-			<hr className="mx-auto mt-6 mb-6 border-grey-300 rounded w-80/100"/>
+			<hr className="mx-auto my-10 border-grey-300 rounded w-80/100"/>
 			<Footer />
 
 

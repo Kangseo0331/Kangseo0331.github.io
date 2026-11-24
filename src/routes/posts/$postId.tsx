@@ -42,7 +42,7 @@ function PostDetailPage() {
             <time>{post.date}</time>
           </div>
 
-          <h1 className="text-3xl font-bold leading-relaxed">
+          <h1 className="text-3xl text-left font-bold leading-relaxed">
             {post.title}
           </h1>
 
@@ -69,7 +69,7 @@ function PostDetailPage() {
         <MarkdownContent content={post.content} />
       </article>
 
-      <div className="border-t mt-16 pt-8">
+      <div className="flex justify-end border-t mt-16 pt-8">
         {category && (
           <Link
             to="/categories/$categoryId"
